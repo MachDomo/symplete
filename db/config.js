@@ -4,7 +4,7 @@ const employeeSchema = require('./models/employee');
 const taskSchema = require('./models/task');
 
 
-// Database
+// Arguments are = (DatabaseName, username, password)
 const sequelize = new Sequelize('symplete_challenge', 'root', '', {
   dialect: 'mysql'
 });
