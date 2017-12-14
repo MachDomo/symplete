@@ -6,11 +6,16 @@ import './tasks.css';
 
 
 class TasksController {
-  constructor() {
+  constructor(TasksService) {
+    this.TasksService = TasksService;
+  }
+
+  $onInit() {
+    this.TasksService.getAllTasks();
   }
 }
 
-TasksController.$inject = [];
+TasksController.$inject = ['TasksService'];
 
 const TasksComponent = {
   template: template,

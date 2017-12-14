@@ -1,3 +1,6 @@
 <div class="tasks">
-  This is the task column
+  Test
+  <div ng-repeat="task in $ctrl.TasksService.tasks | orderBy: 'id'">
+    {{task.title}}
+  </div>
 </div>

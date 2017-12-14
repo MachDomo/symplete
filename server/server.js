@@ -52,7 +52,6 @@ app.post('/api/tasks', (req, res) => {
 
 // Join a task to an employee
 app.put('/api/tasks/:taskId', (req, res) => {
-  console.log(req.body);
   db.Task.update(
     {employeeId: req.body.employeeId || null},
     {where: {id: req.params.taskId}}
