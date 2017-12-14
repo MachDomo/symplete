@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
 
-const Task = sequelize.define('task', {
+const Task = {
   id: {
     type: Sequelize.UUID,
     primaryKey: true,
-    defaultValue: Sequelize.UUIDV4
+    defaultValue: Sequelize.UUIDV4,
     allowNull: false
   },
   title: Sequelize.STRING,
@@ -13,6 +13,6 @@ const Task = sequelize.define('task', {
     type: Sequelize.UUID,
     allowNull: true
   }
-});
+};
 
 module.exports = Task;

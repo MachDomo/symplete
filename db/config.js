@@ -1,15 +1,32 @@
 const mysql = require('mysql2');
 const Sequelize = require('sequelize');
+const employeeSchema = require('./models/employee');
+const taskSchema = require('./models/task');
 
 
-
-const db = new Sequelize('symplete_challenge', 'root', '', {
+// Database
+const sequelize = new Sequelize('symplete_challenge', 'root', '', {
   dialect: 'mysql'
 });
 
+// For convenient export
+const db = {};
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+// Model Definitions
+db.employee = sequelize.define('employee', employeeSchema);
+db.task = sequelize.define('task', taskSchema);
 
 
-db.authenticate().then(() => {
+// Relationships
+db.task.belongsTo(db.employee);
+db.employee.hasMany(db.task);
+
+
+
+
+db.sequelize.authenticate().then(() => {
   console.log('Connection successfully established.');
 }).catch(err => {
   console.error('Unable to connect to the database:', err);
