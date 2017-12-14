@@ -1,6 +1,6 @@
 <div class="tasks">
-  <div class="column-title"><span>Total Tasks: </span></div>
-  <div class="task" ng-repeat="task in $ctrl.TasksService.tasks | orderBy:'createdAt' | filter:$ctrl.filterUnassigned">
+  <div class="column-title"><span>Total Tasks: {{unassignedTasks.length}}</span></div>
+  <div class="task" ng-repeat="task in (unassignedTasks = ($ctrl.TasksService.tasks | orderBy:'createdAt' | filter:$ctrl.filterUnassigned))">
     <div class="task-title"><span>{{task.title}}</span></div>
     <div class="add-task dropdown">
       <span class="dropbtn">+</span>

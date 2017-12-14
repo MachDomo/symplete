@@ -8,6 +8,7 @@ import './tasks.css';
 class TasksController {
   constructor(TasksService) {
     this.TasksService = TasksService;
+    this.unassignedTasks = [];
   }
 
   filterUnassigned(task) {
