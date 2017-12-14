@@ -13,6 +13,10 @@ class TeamController {
   $onInit() {
     this.TasksService.getAllEmployees();
   }
+
+  filterAssigned(task) {
+    return task.employeeId !== null;
+  }
 }
 
 TeamController.$inject = ['TasksService'];
