@@ -18,7 +18,6 @@ db.sequelize = sequelize;
 db.Employee = sequelize.define('employee', employeeSchema);
 db.Task = sequelize.define('task', taskSchema);
 
-
 // Relationships
 db.Task.belongsTo(db.Employee);
 db.Employee.hasMany(db.Task);

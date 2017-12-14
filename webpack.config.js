@@ -1,5 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -8,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, '/client/public/dist')
   },
-  devtool: 'source-map',
+  devtool: 'sourcemap',
   module: {
     loaders: [
       {
@@ -21,9 +22,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: [path.join(__dirname, '/client/src'],
-        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
-      }
+        include: [path.join(__dirname, '/client/src')],
+        loader: 'style-loader!css-loader'
+      },
+      { test: /\.html$/, loader: 'raw-loader' }
     ]
   },
+  plugins: [new HtmlWebpackPlugin({
+    title: 'Symplete Challenge',
+    template: './client/index.html',
+    inject: 'body',
+    hash: true
+  })]
 };

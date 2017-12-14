@@ -9,10 +9,6 @@ const Task = {
   },
   title: Sequelize.STRING,
   description: Sequelize.STRING,
-  employee_id: {
-    type: Sequelize.UUID,
-    allowNull: true
-  }
 };
 
 module.exports = Task;
