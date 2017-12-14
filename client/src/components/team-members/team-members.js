@@ -17,6 +17,12 @@ class TeamController {
   filterAssigned(task) {
     return task.employeeId !== null;
   }
+
+  filterByEmployee(employeeId) {
+    return (task) => {
+      return task.employeeId === employeeId;
+    };
+  }
 }
 
 TeamController.$inject = ['TasksService'];
