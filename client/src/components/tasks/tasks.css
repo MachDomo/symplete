@@ -15,14 +15,10 @@
   flex: 1;
 }
 
-
-
 .add-task:hover {
   color: black;
   cursor: pointer;
 }
-
-
 
 .dropbtn {
     color: white;

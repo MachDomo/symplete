@@ -1,5 +1,5 @@
 <div class="detail-view">
-  <div class="column-title">{{$ctrl.TasksService.selectedEmployee.name || 'None Selected'}}</div>
+  <div class="column-title">{{$ctrl.TasksService.selectedEmployee.name || 'None Selected'}}<i class="material-icons detail-search">search</i></div>
   <div ng-if="!$ctrl.TasksService.selectedEmployee.name" class="detail-body">Click on an employee on the left to see their tasks here</div>
   <div ng-if="!$ctrl.assigned.length && $ctrl.TasksService.selectedEmployee.name" class="detail-body">This employee has no assigned tasks</div>
   <div class="detail-item" ng-repeat="task in ($ctrl.assigned = ($ctrl.TasksService.tasks | filter:$ctrl.filterByEmployee))">

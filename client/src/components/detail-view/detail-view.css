@@ -1,3 +1,10 @@
+
+
+.detail-search {
+  position: absolute;
+  right: 0px;
+}
+
 .detail-body {
   font-size: 20px;
   letter-spacing: 0.7px;
