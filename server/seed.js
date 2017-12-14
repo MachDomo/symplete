@@ -8,10 +8,10 @@ const MOCK_EMPLOYEES = [
 ];
 
 const MOCK_TASKS = [
-  {title: 'Create wireframes', description: 'Create wireframes'},
-  {title: 'Set up database schema', description: 'Set up database schema'},
-  {title: 'Travel through time and space', description: 'Travel through time and space'},
-  {title: 'Scramble some eggs', description: 'Scramble some eggs'}
+  {title: 'Create wireframes', description: 'Make some mockups of the final app.'},
+  {title: 'Set up database schema', description: 'Use MySQL and Sequelize to create a task managing application.'},
+  {title: 'Travel through time and space', description: 'Find a doctor to help with this.'},
+  {title: 'Scramble some eggs', description: 'Customers are hungry and are beginning to complain'}
 ];
 
 const seedDB = () => {

@@ -19,7 +19,6 @@ class TasksController {
     this.TasksService.getAllTasks();
   }
 
-
 }
 
 TasksController.$inject = ['TasksService'];

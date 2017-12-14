@@ -1,6 +1,6 @@
 <div class="team">
   <div class="column-title"><span>Team Members</span><span class="employee-total-tasks">Total Tasks: {{($ctrl.TasksService.tasks | filter:$ctrl.filterAssigned).length }}</span></div>
-  <div class="employee-card" ng-repeat="employee in $ctrl.TasksService.employees">
+  <div class="employee-card" ng-dblclick="$ctrl.TasksService.selectEmployee(employee)" ng-repeat="employee in $ctrl.TasksService.employees">
     <div class="employee-name"><span>{{employee.name}}</span></div>
     <div class="employee-task-count"><span>Tasks: {{($ctrl.TasksService.tasks | filter:$ctrl.filterByEmployee(employee.id)).length }}</span></div>
   </div>

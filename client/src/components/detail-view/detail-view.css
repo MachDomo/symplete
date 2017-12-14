@@ -3,3 +3,26 @@
   letter-spacing: 0.7px;
   color: #9b9b9b;
 }
+
+.detail-item {
+  border-radius: 3px;
+  background-color: #ff526b;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+  line-height: 1.22;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+
+.detail-title {
+  margin-bottom: 10px;
+}
+
+.detail-description {
+  font-size: 15px;
+}

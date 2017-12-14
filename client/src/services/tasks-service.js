@@ -4,6 +4,7 @@ export default class TasksService {
     this.http = $http;
     this.tasks = [];
     this.employees = [];
+    this.selectedEmployee = {};
 
     // Bindings for methods
     this.getAllTasks = this.getAllTasks.bind(this);
@@ -11,7 +12,9 @@ export default class TasksService {
     this.getTasksByEmployee = this.getTasksByEmployee.bind(this);
     this.addTaskToEmployee = this.addTaskToEmployee.bind(this);
     this.removeTask = this.removeTask.bind(this);
+    this.selectEmployee = this.selectEmployee.bind(this);
   }
+
 
   getAllTasks() {
     return this.http.get('/api/tasks').then((res) => {
@@ -42,5 +45,8 @@ export default class TasksService {
     })
   }
 
+  selectEmployee(employee) {
+    this.selectedEmployee = employee;
+  }
 
 }
