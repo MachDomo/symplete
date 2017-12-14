@@ -1,14 +1,15 @@
 .task {
   border-radius: 3px;
   background-color: #ff526b;
-  text-align: center;
-  padding: 15px 0 15px 0;
+  text-align: left;
+  padding: 15px;
   margin-bottom: 25px;
   color: #ffffff;
   letter-spacing: 0.6px;
   line-height: 1.22;
   font-size: 18px;
   display: flex;
+  align-items: center;
 }
 
 .task-title {
@@ -88,14 +89,13 @@
   border-radius: 3px;
   background-color: #ff526b;
   text-align: center;
-  padding: 15px 25px;
+  padding: 15px;
   margin-bottom: 25px;
   color: #ffffff;
   letter-spacing: 0.6px;
   line-height: 1.22;
   font-size: 18px;
   display: flex;
-  flex-direction: column;
 }
 
 .add-new-task input {
@@ -104,6 +104,7 @@
   background-color: #ff526b;
   color: #ffffff;
   border: none;
+  font-size: 18px;
 }
 
 .add-new-task input::placeholder {
@@ -115,12 +116,20 @@
   outline: none;
 }
 
-.add-new-task label, button, input {
-  display: block;
-  width: 100%;
-  font-size: 20px;
-  margin-bottom: 5px;
+.add-new-task button {
+  font-size: 45px;
   background-color: #ff526b;
   border: none;
-  color: #ffffff
+  color: #ffffff;
+}
+
+.add-new-task button:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.task-inputs {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
