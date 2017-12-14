@@ -48,6 +48,14 @@ app.get('/api/tasks/:employeeId', (req, res) => {
 
 // Create a task -Not needed yet
 app.post('/api/tasks', (req, res) => {
+  const task = {title: req.body.title, description: req.body.description};
+  console.log('post task', task);
+  db.Task.create(task).then((task) => {
+    res.status(201).json(task);
+  }).catch((err) => {
+    console.log('Server error creating task', err);
+    res.status(500).json('There was a server error');
+  });
 });
 
 // Join a task to an employee

@@ -9,6 +9,8 @@ class TasksController {
   constructor(TasksService) {
     this.TasksService = TasksService;
     this.unassignedTasks = [];
+
+    this.submitForm = this.submitForm.bind(this);
   }
 
   filterUnassigned(task) {
@@ -17,6 +19,13 @@ class TasksController {
 
   $onInit() {
     this.TasksService.getAllTasks();
+  }
+
+  submitForm() {
+    this.TasksService.createTask({title: this.title, description: this.description}).then(() => {
+      this.title = '';
+      this.description = '';
+    });
   }
 
 }

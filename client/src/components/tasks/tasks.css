@@ -15,7 +15,9 @@
   flex: 1;
 }
 
-.add-task:hover {
+
+
+.attach-task:hover {
   color: black;
   cursor: pointer;
 }
@@ -27,6 +29,8 @@
     border: none;
     cursor: pointer;
 }
+
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -78,4 +82,45 @@
 .dropdown-content-item:hover {
   background-color: #9b9b9b;
   color: #ffffff;
+}
+
+.add-new-task {
+  border-radius: 3px;
+  background-color: #ff526b;
+  text-align: center;
+  padding: 15px 25px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+  line-height: 1.22;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-new-task input {
+  padding: 5px 0;
+  width: 100%;
+  background-color: #ff526b;
+  color: #ffffff;
+  border: none;
+}
+
+.add-new-task input::placeholder {
+  color: #ffffff;
+  font-family: Roboto;
+}
+
+.add-new-task input:focus {
+  outline: none;
+}
+
+.add-new-task label, button, input {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 5px;
+  background-color: #ff526b;
+  border: none;
+  color: #ffffff
 }

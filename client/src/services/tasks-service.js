@@ -13,6 +13,7 @@ export default class TasksService {
     this.addTaskToEmployee = this.addTaskToEmployee.bind(this);
     this.removeTask = this.removeTask.bind(this);
     this.selectEmployee = this.selectEmployee.bind(this);
+    this.createTask = this.createTask.bind(this);
   }
 
 
@@ -20,6 +21,12 @@ export default class TasksService {
     return this.http.get('/api/tasks').then((res) => {
       console.log('tasks', res);
       this.tasks = res.data;
+    });
+  }
+
+  createTask(task) {
+    return this.http.post('/api/tasks', task).then((res) => {
+      this.getAllTasks();
     });
   }
 

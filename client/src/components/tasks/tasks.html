@@ -9,3 +9,8 @@
       </div>
   </div>
 </div>
+<form class="add-new-task">
+  <input ng-model="$ctrl.title" placeholder="Name of Task"/>
+  <input ng-model="$ctrl.description" placeholder="Description of Task"/>
+  <button ng-click="$ctrl.submitForm()">+</button>
+</form>
