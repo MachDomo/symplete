@@ -15,16 +15,16 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // Model Definitions
-db.employee = sequelize.define('employee', employeeSchema);
-db.task = sequelize.define('task', taskSchema);
+db.Employee = sequelize.define('employee', employeeSchema);
+db.Task = sequelize.define('task', taskSchema);
 
 
 // Relationships
-db.task.belongsTo(db.employee);
-db.employee.hasMany(db.task);
+db.Task.belongsTo(db.Employee);
+db.Employee.hasMany(db.Task);
 
-
-
+// Creates tables if they don't exist
+db.sequelize.sync();
 
 db.sequelize.authenticate().then(() => {
   console.log('Connection successfully established.');
