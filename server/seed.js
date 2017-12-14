@@ -8,10 +8,10 @@ const MOCK_EMPLOYEES = [
 ];
 
 const MOCK_TASKS = [
-  {title: 'Task 1', description: 'Create wireframes'},
-  {title: 'Task 2', description: 'Set up database schema'},
-  {title: 'Task 3', description: 'Travel through time and space'},
-  {title: 'Task 4', description: 'Scramble some eggs'}
+  {title: 'Create wireframes', description: 'Create wireframes'},
+  {title: 'Set up database schema', description: 'Set up database schema'},
+  {title: 'Travel through time and space', description: 'Travel through time and space'},
+  {title: 'Scramble some eggs', description: 'Scramble some eggs'}
 ];
 
 const seedDB = () => {

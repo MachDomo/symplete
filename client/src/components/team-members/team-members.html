@@ -1,3 +1,7 @@
 <div class="team">
-  This is the team members column
+  <div class="column-title"><span>Team Members</span><span class="employee-total-tasks">Total Tasks: </span></div>
+  <div class="employee-card" ng-repeat="employee in $ctrl.TasksService.employees">
+    <div class="employee-name"><span>{{employee.name}}</span></div>
+    <div class="employee-task-count"><span>Tasks</span><span>4</span></div>
+  </div>
 </div>

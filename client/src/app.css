@@ -1,5 +1,31 @@
-.app {
-  height: 100%;
-  width: 100%;
+body {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  height: 953px;
+  width: 1202px;
+  display: flex;
+  background-color: #ffffff;
+  font-family: Roboto;
+  justify-content: space-around;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+
+.column {
+  flex: 1 0 0;
+  border: solid 1px #c7c9ca;
+  padding: 60px 50px;
+}
+
+.column-title {
+  font-size: 20px;
+  text-align: left;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+  position: relative;
 }

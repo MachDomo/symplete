@@ -6,11 +6,16 @@ import './team-members.css';
 
 
 class TeamController {
-  constructor() {
+  constructor(TasksService) {
+    this.TasksService = TasksService;
+  }
+
+  $onInit() {
+    this.TasksService.getAllEmployees();
   }
 }
 
-TeamController.$inject = [];
+TeamController.$inject = ['TasksService'];
 
 const TeamComponent = {
   template: template,

@@ -64,7 +64,7 @@ app.put('/api/tasks/:taskId', (req, res) => {
 });
 
 // Remove a task from employee
-app.put('/api/tasks/remove/:taskId', (req, res) => {
+app.put('/api/tasks/:taskId/remove', (req, res) => {
   db.Task.update(
     {employeeId: null},
     {where: {id: req.params.taskId}}

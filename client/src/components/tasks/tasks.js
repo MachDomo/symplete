@@ -10,9 +10,15 @@ class TasksController {
     this.TasksService = TasksService;
   }
 
+  filterUnassigned(task) {
+    return task.employeeId === null;
+  }
+
   $onInit() {
     this.TasksService.getAllTasks();
   }
+
+
 }
 
 TasksController.$inject = ['TasksService'];

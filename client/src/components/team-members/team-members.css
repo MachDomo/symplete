@@ -1,0 +1,30 @@
+.employee-card {
+  border-radius: 3px;
+  background-color: rgba(0, 25, 52, 0.87);
+  color: #ffffff;
+  margin-bottom: 25px;
+  padding: 15px;
+  text-align: left;
+}
+
+.employee-card:hover {
+  background-color: #3fb1fe;
+  cursor: pointer;
+}
+
+
+.employee-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.7px;
+  margin-bottom: 25px;
+}
+
+.employee-total-tasks {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
